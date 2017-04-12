@@ -35,11 +35,11 @@ public class WeatherDownloader {
                 .appendQueryParameter("appid", apiKey);
         if (city.matches("\\d+")) // if user input are digits, process as zip code
             apiBuilder.appendQueryParameter("zip", city);
-        else
+        else // otherwise. process as city name
             apiBuilder.appendQueryParameter("q", city);
 
         String urlString = apiBuilder.build().toString();
-
+        Log.v(TAG, "API Request url: " + urlString);
 
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
