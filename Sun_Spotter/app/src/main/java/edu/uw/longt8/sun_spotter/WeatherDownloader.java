@@ -71,13 +71,12 @@ public class WeatherDownloader {
             }
 
             String results = buffer.toString();
-            Log.v("ListActivity", results);
             try {
                 weathers = new JSONObject(results);
             } catch (JSONException e) {
-                Log.e("Main", "JSON Exception", e);
+                Log.e(TAG, "JSON Exception", e);
             }
-            Log.v(TAG, results); //for debugging purposes
+            Log.v(TAG, "results: " + results); //for debugging purposes
 
         } catch (IOException e) {
             return null;
