@@ -28,9 +28,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String searchTerm = searchField.getText().toString();
                 Log.v(TAG, "Searching for: " + searchTerm);
+                String apiKey = getString(R.string.OPEN_WEATHER_MAP_API_KEY);
+                String city = "98105";
+
+
+
 
 //                MovieDownloadTask task = new MovieDownloadTask();
 //                task.execute(searchTerm);
+
             }
         });
     }
