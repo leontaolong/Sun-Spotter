@@ -1,5 +1,5 @@
 # Sun Spotter
-This is a simple Andriod App that allows the user to enter their zip code or city name and hit a "Search" button. Beneath the form is a View that shows whether there is going to be any sun in the next few days, and if so when that first sun will be. There is als a scrollable list of the tri-hourly forecast for the next few days, emphasizing whether there is sun or not.
+This is a simple Android App that allows the user to enter their zip code or city name and hit a "Search" button. Beneath the form is a View that shows whether there is going to be any sun in the next few days, and if so when that first sun will be. There is als a scrollable list of the tri-hourly forecast for the next few days, emphasizing whether there is sun or not.
 
 The user stories for the Sun Spotter app are:
 
