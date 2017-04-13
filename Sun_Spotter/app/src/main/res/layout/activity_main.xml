@@ -7,12 +7,12 @@
     tools:context="edu.uw.longt8.sun_spotter.MainActivity">
 
     <include layout="@layout/search_input_layout"/>
-    <!--<include layout="@layout/weather_result"/>-->
+    <include layout="@layout/weather_result"/>
 
-    <ViewStub
-        android:id="@+id/stub"
-        android:inflatedId="@+id/stubInflated"
-        android:layout="@layout/weather_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <!--<ViewStub-->
+        <!--android:id="@+id/stub"-->
+        <!--android:inflatedId="@+id/stubInflated"-->
+        <!--android:layout="@layout/weather_result"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
 </RelativeLayout>

@@ -21,12 +21,13 @@ public class WeatherDownloader {
 
     private static final String TAG = "MovieDownloader";
 
-    public static JSONObject WeatherDownloader(String city, String apiKey) {
+    public static JSONObject downloadWeatherData(String city, String apiKey) {
 
         //construct the url for the Open Weather APi
         Uri.Builder apiBuilder = new Uri.Builder();
 
-        apiBuilder.authority("api.openweathermap.org")
+        apiBuilder.scheme("http")
+                .authority("api.openweathermap.org")
                 .appendPath("data")
                 .appendPath("2.5")
                 .appendPath("forecast")
@@ -92,6 +93,7 @@ public class WeatherDownloader {
                 }
             }
         }
+//        Log.v(TAG, "data received: "weathers.toString());
         return weathers;
     }
 }

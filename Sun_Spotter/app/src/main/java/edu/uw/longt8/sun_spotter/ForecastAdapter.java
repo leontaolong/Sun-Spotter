@@ -21,15 +21,14 @@ public class ForecastAdapter extends ArrayAdapter<ForecastAdapter.ForecastData> 
         public String date;
         public String weather;
         public String time;
-        public int icon;
+        public String icon;
         public String temp;
 
 
-        public ForecastData(String date, String weather, String time, int icon, String temp) {
-            this.date = date;
+        public ForecastData(String icon, String weather, String date, String temp) {
             this.weather = weather;
-            this.time = time;
             this.icon = icon;
+            this.date = date;
             this.temp = temp;
         }
     }
