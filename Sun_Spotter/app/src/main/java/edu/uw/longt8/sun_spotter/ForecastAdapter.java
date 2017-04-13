@@ -32,6 +32,7 @@ public class ForecastAdapter extends ArrayAdapter<ForecastAdapter.ForecastData> 
             this.temp = temp;
         }
     }
+
     public static class ViewHolder {
         TextView text;
         ImageView icon;
@@ -41,7 +42,6 @@ public class ForecastAdapter extends ArrayAdapter<ForecastAdapter.ForecastData> 
     public ForecastAdapter(Context context, ArrayList<ForecastData> data) {
         super(context, 0, data);
     }
-
 
 
     @Override

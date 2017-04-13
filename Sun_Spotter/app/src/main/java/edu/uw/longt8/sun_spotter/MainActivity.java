@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
 
-
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,17 +69,17 @@ public class MainActivity extends AppCompatActivity {
             return WeatherDownloader.downloadWeatherData(params[0], params[1]);
         }
 
-        protected void onPostExecute(JSONObject weathers){
+        protected void onPostExecute(JSONObject weathers) {
             Boolean sunny = false;
             Date sunnyDay = null;
 
             Boolean requestErr = false;
             try {
                 String statusCode = weathers.getString("cod");
-                if(Integer.parseInt(statusCode) >= 400) {
+                if (Integer.parseInt(statusCode) >= 400) {
                     requestErr = true;
                 }
-            } catch (JSONException e){
+            } catch (JSONException e) {
                 Log.e(TAG, "Error parsing json", e);
             }
 
@@ -111,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                         String temp = jsonObj.getJSONObject("main").getString("temp");
 
                         //check earliest sunny time
-                        if(weather.equals("Clear") && !sunny){
+                        if (weather.equals("Clear") && !sunny) {
                             sunny = true;
                             sunnyDay = date;
                         }
@@ -125,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                     TextView weatherTitle = (TextView) findViewById(R.id.weatherTitle);
                     TextView weatherTxt = (TextView) findViewById(R.id.weatherText);
 
-                    if(sunny){
+                    if (sunny) {
                         //sunny day case
                         img.setImageResource(R.drawable.ic_check_circle_black_24dp);
                         img.setColorFilter(Color.YELLOW);

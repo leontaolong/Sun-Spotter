@@ -6,11 +6,14 @@
     android:layout_height="match_parent"
     tools:context="edu.uw.longt8.sun_spotter.MainActivity">
 
-    <include layout="@layout/search_input_layout"
-        android:id="@+id/search_input" />
-    <include layout="@layout/weather_result"
-        android:layout_height="wrap_content"
+    <include
+        android:id="@+id/search_input"
+        layout="@layout/search_input_layout" />
+
+    <include
+        layout="@layout/weather_result"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/search_input" />
 
 </RelativeLayout>

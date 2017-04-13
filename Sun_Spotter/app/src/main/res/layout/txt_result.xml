@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content" android:layout_height="wrap_content"
-    android:id="@+id/txtResult">
+    android:id="@+id/txtResult"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:id="@+id/weatherTextResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
         android:orientation="vertical"
-        android:padding="10dp"
-        android:layout_marginLeft="20dp">
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/weatherTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
-            android:textSize="24sp"/>
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/weatherText"
@@ -31,7 +32,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginLeft="15dp"
-        android:layout_toRightOf="@id/weatherTextResult"
-        />
+        android:layout_toRightOf="@id/weatherTextResult" />
 
 </RelativeLayout>
