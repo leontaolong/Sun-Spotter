@@ -1,6 +1,7 @@
 package edu.uw.longt8.sun_spotter;
 
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -115,7 +116,9 @@ public class MainActivity extends AppCompatActivity {
                             sunnyDay = date;
                         }
 
-                        adapter.add(new ForecastAdapter.ForecastData(icon, weather, dateString, temp));
+                        int drawableId = getResources().getIdentifier("icon" + icon, "drawable", getPackageName());
+                        Drawable drawableIcon = getDrawable(drawableId);
+                        adapter.add(new ForecastAdapter.ForecastData(drawableIcon, weather, dateString, temp));
                     }
 
                     ImageView img = (ImageView) findViewById(R.id.weatherImg);
